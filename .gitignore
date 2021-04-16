@@ -1,4 +1,5 @@
 backend/db.sqlite3
 backend/.vscode/
 products/migrations/
-products/__pycache__
+products/__pycache__/
+media/
