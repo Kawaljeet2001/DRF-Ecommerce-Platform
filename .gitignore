@@ -1,0 +1,4 @@
+backend/db.sqlite3
+backend/.vscode/
+products/migrations/
+products/__pycache__
