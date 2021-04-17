@@ -1,0 +1,78 @@
+.Navbar{
+    background: white;
+    height: 8vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.Navbar .logo-holder{
+    overflow: hidden;
+    height: 8vh;
+    margin-left: 50px;
+}
+
+.Navbar .search button{
+    background: #0466c8;
+    color: white;
+    padding: 10px 10px;
+    margin-left: 2px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.Navbar .search input{
+    padding: 10px 20px;
+    width:400px;
+    border: 1.5px solid #bbb;
+    border-radius: 5px;
+    outline: none;
+
+}
+.Navbar .logo-holder img{
+    max-height: 100%;
+    max-width: 100%;
+}
+button{
+    outline: none;
+}
+.Navbar .sign-in{
+    background: #0466c8;
+    color: white;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.Navbar .sign-up{
+    color: #0466c8;
+    border: 2px solid #0466c8;
+    padding: 9px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.Navbar .my-cart{
+   padding: 9px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.Navbar .my-cart span{
+    background: #f48c06;
+    padding: 5px 8px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
