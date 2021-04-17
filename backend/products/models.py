@@ -27,3 +27,10 @@ class Product(models.Model):
     
     def __str__(self):
         return self.name
+
+
+class ProductDisplayImage(models.Model):
+    image = models.ImageField(null = True , blank = True)
+    image_description = models.TextField(null = True , blank = True)
+    product_name = models.ForeignKey(Product , on_delete = models.CASCADE)
+
