@@ -18,3 +18,8 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = "__all__"
     category = CastegorySerializer()
     color = ColorVariantSerializer()
+
+class DisplayImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductDisplayImage
+        exclude = ["id" , "product_name"]
