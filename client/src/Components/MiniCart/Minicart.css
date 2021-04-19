@@ -1,0 +1,31 @@
+.MiniCart{
+    background: white;
+    width: 350px;
+    border-radius: 10px;
+    height: 430px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MiniCart .cart-items-container{
+    height:70%;
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+}
+.Link{
+    text-decoration: none;
+    background: #0466c8;
+    color: white;
+    padding: 10px 10px;
+    margin-left: 2px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: block;
+    width: 80%;
+
+}

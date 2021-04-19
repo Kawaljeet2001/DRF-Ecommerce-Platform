@@ -1,0 +1,49 @@
+.Carousel{
+    display: flex;
+    justify-content: center;
+    transition: 0.2s ease;
+    height: 89vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Carousel-transition{
+    opacity: 0.5;
+}
+.carouselImage{
+    
+    max-height: 100%;
+    max-width: 100%;
+    transition: 0.2s ease;
+    
+}
+
+.Imagefade{
+    animation: fade 1s ease;
+}
+
+@keyframes fade{
+    0% { 
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes delay-animation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    50.01% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

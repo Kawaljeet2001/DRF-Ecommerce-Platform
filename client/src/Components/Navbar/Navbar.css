@@ -1,13 +1,21 @@
 .Navbar{
     background: white;
     height: 8vh;
-    position: absolute;
+    position: sticky;
     top: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0px;
+    z-index: 20;
+}
+
+.Navbar-shadow{
+    box-shadow: 2px 1px 5px #293241;
+}
+.Navbar{
+    box-shadow: 2px 1px 5px #293241;
 }
 
 .Navbar .logo-holder{

@@ -1,0 +1,13 @@
+.Mini-cart-item{
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.Mini-cart-item .item-delete{
+    background: #ef233c;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 5px;
+}
