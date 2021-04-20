@@ -6,23 +6,48 @@ button{
 }
 .Product-Detail{
     background: white;
-    border-radius: 10px;
-    padding: 20px 25px;
+    padding: 20px 20px 10px 0px;
     display: flex;
-    width: 65%;
+    
+    width: 100%;
 }
 
 .Product-Detail .info{
-    flex-basis: 55%;
+    flex-basis: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-evenly;
 }
 
 .Product-Detail .image-slider{
-    flex-basis: 45%;
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 0px 0px 20px;
 }
+
+.Product-Detail .image-slider img{
+    transition: 0.3s ease-in-out;
+    max-height: 100%;
+    
+}
+.Product-Detail .image-slider .display-image-holder{
+    margin: 5px 5px;
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+    max-width: 370px;
+    background-color: rebeccapurple;
+    overflow: hidden;
+}
+
+.Product-Detail .image-slider img:hover{
+    transform: scale(1.1);
+    cursor: zoom-in;
+    
+}
+
 
 .Product-Detail .info h2{
     font-size: 25px;
@@ -30,19 +55,68 @@ button{
     font-weight: 600;
     opacity: .9;
     color: #495057;
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
+.Product-Detail .info .taxes{
+    margin-top: -12px;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(3, 166, 133);
+}
 .Product-Detail .info .price{
-    margin-top: 0;
+    margin-top: -10px;
     font-size: 20px;
     font-weight: 600;
 }
+
+.Product-Detail .info .sizes{
+    margin-top: 20px;
+}
+
+.Product-Detail .info .sizes .size-holder{
+    display: flex;
+
+}
+
+.Product-Detail .info .sizes .size-holder .size-val{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+.Product-Detail .info .sizes .size-holder .size-val:hover{
+    border: 1px solid #f94144;
+}
+.Product-Detail .info .sizes p{
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .Product-Detail .info .description{
     text-align: justify;
     font-size: 16px;
     color: #6c757d;
     margin-top: 0;
 } 
+
+.Product-Detail .info .list-text li{
+    list-style: none;
+    margin: 5px 0px;
+    color: #495057;
+    font-weight: 400 ;
+}
 
 .Product-Detail .info .brand{
     margin-top: 5px ;
@@ -64,6 +138,14 @@ button{
     font-weight: 600;
 }
 
+.Product-Detail .info .buttons {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
 .Product-Detail .info .buttons .BuyNow{
     background: #0466c8;
     color: white;
@@ -81,5 +163,5 @@ button{
     font-weight: 600;
     border-radius: 5px;
     margin-left: 10px;
-    margin-bottom: 20px;
+ 
 }

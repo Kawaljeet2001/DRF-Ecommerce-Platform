@@ -3,13 +3,15 @@ import ProductDetailComp from "../../Components/ProductDetail";
 import MiniCart from "../../Components/MiniCart";
 import "./ProductDetailpage.css";
 
-const index = () => {
+const ProductDetail = ({DisplayImages , ProductInfo }) => {
     return (
         <div className = "ProductDetailPage">
-            <ProductDetailComp/>
-            <MiniCart/>
+            <ProductDetailComp
+           DisplayImages = {DisplayImages}
+            ProductInfo = {ProductInfo}
+            />
         </div>
     )
 }
 
-export default index
+export default ProductDetail
