@@ -6,41 +6,50 @@ button{
 }
 .Product-Detail{
     background: white;
-    padding: 20px 20px 10px 0px;
+    padding: 20px 10px 10px 0px;
     display: flex;
-    
-    width: 100%;
+    width: 99%;
 }
 
+.Product-Detail .info .seperator{
+    background: #ddd;
+    width: 100%;
+    margin-top: -10px;
+    height: 0.5px;
+}
 .Product-Detail .info{
-    flex-basis: 45%;
+    /* flex-basis: 45%; */
     display: flex;
+    max-width: 50%;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+    /* background-color: rebeccapurple; */
 }
 
 .Product-Detail .image-slider{
-    flex-basis: 55%;
+    /* flex-basis: 55%; */
+    max-width: 50%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0px 0px 0px 20px;
+    /* background-color: red; */
 }
 
+.Product-Detail .image-slider .display-image-holder{
+    margin: 5px 5px;
+    overflow: hidden;
+    width: 23vw;
+}
 .Product-Detail .image-slider img{
     transition: 0.3s ease-in-out;
     max-height: 100%;
+    max-width: 100%;
     
+  
 }
-.Product-Detail .image-slider .display-image-holder{
-    margin: 5px 5px;
-    max-height: 500px;
-    height: 100%;
-    width: 100%;
-    max-width: 370px;
-    background-color: rebeccapurple;
-    overflow: hidden;
-}
+
 
 .Product-Detail .image-slider img:hover{
     transform: scale(1.1);
@@ -51,13 +60,13 @@ button{
 
 .Product-Detail .info h2{
     font-size: 25px;
+    display: block;
+    width: 90%;
     text-align: justify;
     font-weight: 600;
     opacity: .9;
     color: #495057;
-    display: block;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+    margin-top: 5px;
 }
 
 .Product-Detail .info .taxes{
@@ -67,7 +76,7 @@ button{
     color: rgb(3, 166, 133);
 }
 .Product-Detail .info .price{
-    margin-top: -10px;
+    margin-top: 10px;
     font-size: 20px;
     font-weight: 600;
 }

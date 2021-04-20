@@ -2,16 +2,22 @@ import React from 'react';
 import "./ProductDetail.css";
 
 const ProductDetailComponent = ({ProductInfo , DisplayImages}) => {
+    React.useEffect( () => {
+        document.title = `Buy ` + ProductInfo.name
+    }, [])
     return (
         <div className = "Product-Detail">
             <div className = "image-slider">
                 {DisplayImages.map((image , index) => {
                     return <div className = "display-image-holder"><img src = {`http://127.0.0.1:8000` + image.image}/></div>
+                    // return <img src = {`http://127.0.0.1:8000` + image.image}/>
                 })}
            </div>
             <div className = "info">
                 <h2>{ProductInfo.name}</h2>
-                <hr></hr>
+                <div className = "seperator">
+                    &nbsp;
+                </div>
                 <p className = "price">Rs. {ProductInfo.price}</p>
                 <p className = "taxes">inclusive of all taxes</p>
                 <p className = "description">{ProductInfo.description}</p>
@@ -55,6 +61,7 @@ const ProductDetailComponent = ({ProductInfo , DisplayImages}) => {
                     </li>
                 </div>
             </div>
+
         </div>
     )
 }

@@ -11,11 +11,8 @@
     z-index: 20;
 }
 
-.Navbar-shadow{
-    box-shadow: 2px 1px 5px #293241;
-}
 .Navbar{
-    box-shadow: 2px 1px 5px #293241;
+    box-shadow: 2px 1px 5px #ddd;
 }
 
 .Navbar .logo-holder{
