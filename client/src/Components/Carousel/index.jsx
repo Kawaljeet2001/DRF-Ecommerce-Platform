@@ -16,13 +16,9 @@ const Carousel = () => {
             element.classList.toggle("Imagefade")
             loopthroughimages();
         }, 5000)
-
-        
         element.classList.toggle("Imagefade")
-        //also adding the class
     } , [currentImage])
 
-    
     return (
         <div className = "Carousel">
             <img id = "carouselimage" className = 'carouselImage' src = {CarouselData[currentImage].image}/>
