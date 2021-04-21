@@ -1,6 +1,6 @@
 .product-card{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 430px;
     width: 240px;
     background: white;
@@ -9,7 +9,7 @@
 
 .product-card .thumbnail{
     height: 320px;
-    background: rebeccapurple;
+  
 }
 
 .product-card .thumbnail img{
@@ -24,14 +24,14 @@
     padding-bottom: 10px;
 }
 .product-card .name-price p{
-   font-size: 12px;
+    margin-left: 10px;
 }
 
 .product-card .name-price h6{
     margin-top: -10px;
+    opacity: 0.7;
     font-size: 20px;
-    width: 100%;
-    text-align: center;
-    margin-left: -10px;
+    font-weight: 500;
+    margin-left: 10px;
     
 }

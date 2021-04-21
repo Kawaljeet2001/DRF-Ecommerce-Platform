@@ -8,6 +8,7 @@ import MiniCart from "./Components/MiniCart"
 import ProductDetailPage from "./Pages/ProductDetail";
 import HomePage from "./Pages/HomePage";
 import {Route} from "react-router-dom";
+import SearchPage from './Pages/SearchPage';
 function App() {
 
   return (
@@ -17,24 +18,8 @@ function App() {
       </Route>
       <Route path = "/product">
         <ProductDetailPage
-          ProductInfo = {
-        //     "id": 2,
-        //     "category": {
-        //         "category_name": "clothing"
-        //     },
-        //     "color": {
-        //         "color_code": "#000000",
-        //         "color_name": "black"
-        //     },
-        //     "name": "Roadster :  Men Teal Blue & Black Printed Round Neck T-shirt",
-        //     "brand": "ROADSTER",
-        //     "description": "Teal blue and Black printed T-shirt has a round neck, and short sleeves",
-        //     "price": 1500,
-        //     "sizes_available" : ['M' , 'L' , 'XL' , 'XXL'],
-        //     "thumbnail": "/media/products/default.jpg",
-        //     "stock": 20
-        // }{
-          {"id": 3,
+          ProductInfo = {{
+          "id": 3,
           "category": {
               "category_name": "clothing"
           },
@@ -73,6 +58,9 @@ function App() {
             }
         ]}
         />
+      </Route>
+      <Route path = "/search" >
+        <SearchPage/>
       </Route>
 
     </div>
