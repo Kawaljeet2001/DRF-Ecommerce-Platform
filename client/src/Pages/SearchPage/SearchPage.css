@@ -1,0 +1,18 @@
+.SearchPage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: rebeccapurple; */
+}
+.SearchPage .product-card-container{
+    width: 76vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.SearchPage .product-card-container .product-card{
+    margin: 10px 10px;
+}
