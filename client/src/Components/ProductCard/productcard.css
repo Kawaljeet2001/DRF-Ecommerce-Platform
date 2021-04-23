@@ -4,7 +4,10 @@
     height: 430px;
     width: 240px;
     background: white;
+    overflow: hidden;
     border: 1px solid  #eee;
+    text-decoration: none;
+    color: black;
 }
 
 .product-card .thumbnail{

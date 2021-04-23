@@ -3,29 +3,23 @@ import ProductDetailComp from "../../Components/ProductDetail";
 import MiniCart from "../../Components/MiniCart";
 import "./ProductDetailpage.css";
 import ProductCard from "../../Components/ProductCard";
+import {useLocation , useParams} from 'react-router-dom';
+import axios from "axios";
 
-const ProductDetailPage = ({ DisplayImages, ProductInfo }) => {
+const ProductDetailPage = () => {
+  const ProductId = useParams().productid
+  console.log(ProductId)
   return (
     <div className="ProductDetailPage">
       <ProductDetailComp
-        DisplayImages={DisplayImages}
-        ProductInfo={ProductInfo}
+        id = {ProductId}
       />
-      <div className="Similar-products">
+     <div className="Similar-products">
         <p>SIMILAR PRODUCTS</p>
         <div>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-
-        </div>
+       </div>
       </div>
+      
     </div>
   );
 };

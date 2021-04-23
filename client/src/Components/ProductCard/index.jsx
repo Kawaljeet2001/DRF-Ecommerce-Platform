@@ -1,17 +1,25 @@
 import React from 'react';
 import "./productcard.css";
-import image from "../../3_1.jpg"
-const index = () => {
+import {Link} from "react-router-dom";
+
+const index = ({ProductInfo}) => {
     return (
-        <div className = "product-card">
+        <>
+        <Link
+            className = "product-card"
+            to = {{
+            pathname : `/product/${ProductInfo.id}`,
+        }}
+        >
             <div className = "thumbnail">
-                <img src={image} alt=""/>
+                <img src={ProductInfo.thumbnail} alt={ProductInfo.name}/>
             </div>
             <div className = "name-price">
-                <p>WROGN Navy Printed Polo T-shirt</p>
-                <h6 >Rs. 999</h6>
+                <p>{ProductInfo.name}</p>
+                <h6>{ProductInfo.price}</h6>
             </div>
-        </div>
+        </Link>
+        </>
     )
 }
 

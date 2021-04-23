@@ -61,7 +61,7 @@ button{
 .Product-Detail .info h2{
     font-size: 25px;
     display: block;
-    width: 90%;
+    width: 100%;
     text-align: justify;
     font-weight: 600;
     opacity: .9;

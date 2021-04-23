@@ -1,6 +1,7 @@
 import React from 'react'
 import "./CategoryMenu.css";
 
+
 const CategoryMenu = () => {
     return (
         <div className = "CategoryMenu">
