@@ -1,69 +1,55 @@
-import './App.css';
-import ProductCard from "./Components/ProductCard";
-import axios from "axios";
-import React from 'react'
-import ProductDetail from "./Components/ProductDetail";
-import Navbar from "./Components/Navbar";
-import MiniCart from "./Components/MiniCart"
+import "./App.css";
+import React from "react";
 import ProductDetailPage from "./Pages/ProductDetail";
 import HomePage from "./Pages/HomePage";
-import {Route} from "react-router-dom";
-import SearchPage from './Pages/SearchPage';
+import { Switch, Route, Redirect} from "react-router-dom";
+import SearchPage from "./Pages/SearchPage";
+import LoginRegisterPage from "./Pages/LoginRegisterPage";
+import Navbar from "./Components/Navbar";
+import UserContext from "./UserContext";
+
 function App() {
+  const [LoggedUser, setLoggedUser] = React.useState(false);
+  function UpdateUser(e) {
+    setLoggedUser(e);
+  }
 
+  React.useEffect(() => {
+    var mylocalstorage = window.localStorage;
+
+    var currentuser = mylocalstorage.getItem("currentlyLoggedUser");
+    if(currentuser)
+    {
+        //means there is a user who has logged in with login panel
+        setLoggedUser(currentuser);
+    }
+
+    document.getElementsByClassName("Navbar")[0].style.display = "flex";
+
+  } , [])
   return (
-    <div className="App">
-      <Route path = "/" exact>
-        <HomePage/>
-      </Route>
-      <Route path = "/product">
-        <ProductDetailPage
-          ProductInfo = {{
-          "id": 3,
-          "category": {
-              "category_name": "clothing"
-          },
-          "color": {
-              "color_code": "#000000",
-              "color_name": "black"
-          },
-          "name": "WROGN Navy Printed Polo T-shirt",
-          "brand": "WROGN",
-          "description": "Navy blue printed polo T-shirt, has a polo collar with a short button placket, short sleeves.",
-          "price": 999.0,
-          "sizes_available" : ['S' , 'M' , 'L' , 'XL' , 'XXL'],
-          "thumbnail": "/media/products/3_1.jpg",
-          "stock": 20
-      }}
-          DisplayImages = {[
-            {
-                "image": "/media/3_1.jpg",
-                "image_description": "retg"
-            },
-            {
-                "image": "/media/3_2.jpg",
-                "image_description": "ge4g4et"
-            },
-            {
-                "image": "/media/3_3.jpg",
-                "image_description": "e4gtg4"
-            },
-            {
-                "image": "/media/3_4.jpg",
-                "image_description": "e4tg4e"
-            },
-            {
-                "image": "/media/3_5.jpg",
-                "image_description": "e54tge4tg4"
-            }
-        ]}
-        />
-      </Route>
-      <Route path = "/search" >
-        <SearchPage/>
-      </Route>
-
-    </div>
+    <>
+      <UserContext.Provider value = {{LoggedUser , UpdateUser}}>
+        <Navbar />
+        <div className="App">
+          <Switch>
+            <Route path="/" exact key={1}>
+              <HomePage />
+            </Route>
+            <Route path="/product/:productid" key={3}>
+              <ProductDetailPage />
+            </Route>
+            <Route path="/search" key={2}>
+              <SearchPage />
+            </Route>
+            <Route path="/login" key={4}>
+              {/* {LoggedUser ? <Redirect to="/" /> : <LoginRegisterPage />} */}
+              <LoginRegisterPage/>
+            </Route>
+          </Switch>
+        </div>
+      </UserContext.Provider>
+    </>
   );
 }
 

@@ -4,8 +4,11 @@ import ProductCard from "../../Components/ProductCard";
 import CategoryMenu from "../../Components/CategoryMenu";
 import Loader from "../../Components/Loader";
 import axios from "axios";
+import {useLocation} from "react-router-dom";
+
 
 const SearchPage = () => {
+  const token = useLocation().state;
   const [Products, setProducts] = React.useState([]);
   const [PageNumber , setPageNumber] = React.useState(1);
   const [TogglePage , setTogglePage] = React.useState(false);
@@ -25,7 +28,7 @@ const SearchPage = () => {
   {
     var button = e.target.id;
     
-    if(button == "prev")
+    if(button === "prev")
     {
       if(PageNumber > 1)
       {setTogglePage(true)
@@ -56,6 +59,7 @@ const SearchPage = () => {
   }
   React.useEffect(() => {
         getproducts()
+        document.getElementsByClassName("Navbar")[0].style.display = "flex";
   }, [])
 
   React.useEffect(() => {

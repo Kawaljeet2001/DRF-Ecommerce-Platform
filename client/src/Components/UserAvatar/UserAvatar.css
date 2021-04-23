@@ -1,0 +1,64 @@
+.UserAvatar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+    position: relative;
+}
+.UserAvatar-inner{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 2px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0466c8;
+    border: 2px solid #0466c8;
+}
+
+.UserAvatar p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 32px;
+}
+.userDetails{
+    border: 1px solid #ddd;
+    border-top: none;
+    position: absolute;
+    height: 10vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    top: 70px;
+    box-shadow: 0px 2px 5px #bbb;
+    width: 120px;
+    background: white;
+}
+
+.UserAvatar .userDetails .profile{
+    color: black;
+    opacity: 0.8;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+}
+.UserAvatar .userDetails a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #0466c8;
+    width: 100%;
+    text-align: center;
+    padding: 10px 5px;
+    transition: 0.2s ease;
+    
+}
+
+.UserAvatar .userDetails a:hover{
+    text-decoration: underline;
+}
