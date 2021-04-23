@@ -1,0 +1,36 @@
+.Register{
+    box-shadow: 1px 2px 5px #bbb;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    width: 20vw;
+    height: 48vh;
+    padding: 10px 50px;
+}
+
+.Register h3{
+    font-weight: 500;
+    margin-top: 30px;
+}
+.Register input{
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 10px;
+    outline: none;
+    width: 94%;
+    margin: 5px 0px;
+}
+
+.Register .first {
+    margin-top: 50px !important;
+}
+.Register button{
+    background:#0466c8;
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+    padding: 15px 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
