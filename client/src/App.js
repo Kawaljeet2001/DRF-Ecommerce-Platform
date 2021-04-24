@@ -6,6 +6,7 @@ import { Switch, Route, Redirect} from "react-router-dom";
 import SearchPage from "./Pages/SearchPage";
 import LoginRegisterPage from "./Pages/LoginRegisterPage";
 import Navbar from "./Components/Navbar";
+import CartPage from "./Pages/Cart";
 import UserContext from "./UserContext";
 
 function App() {
@@ -43,8 +44,10 @@ function App() {
               <SearchPage />
             </Route>
             <Route path="/login" key={4}>
-              {/* {LoggedUser ? <Redirect to="/" /> : <LoginRegisterPage />} */}
               <LoginRegisterPage/>
+            </Route>
+            <Route path="/cart" key={5}>
+              <CartPage/>
             </Route>
           </Switch>
         </div>

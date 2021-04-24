@@ -1,0 +1,84 @@
+.CartItem{
+    display: flex;
+    padding: 20px 10px;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    width: 70vw;
+    background: white;
+}
+
+.CartItem .holder{
+    display: flex;
+}
+
+.CartItem .holder .info{
+    margin-left: 15px;
+}
+
+.CartItem .info .product-name{
+    font-size: 20px;
+    text-decoration: none;
+    color: #0466c8;
+    transition: 0.1s ease;
+}
+
+.CartItem .info h6{
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: green;
+}
+
+.CartItem .info p:nth-child(3){
+    margin-top: -20px;
+    font-size: 14px;
+}
+
+.CartItem .info p:nth-child(4){
+    margin-top: -5px;
+    font-size: 14px;
+}
+.CartItem .info p b{
+    font-weight: 600;
+}
+
+.CartItem .info .product-name:hover{
+    text-decoration: underline;
+    color: #f94144;
+}
+
+.CartItem .item-image{
+    overflow: hidden;
+    height: 30vh;
+}
+.CartItem .item-image img{
+    max-height: 100%;
+}
+
+.CartItem .price{
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.CartItem .info .quantity-control{
+    margin-top: 11vh;
+    display: flex;
+    align-items: center;
+}
+
+.CartItem .info .quantity-control input{
+    display: block;
+    width: 60px;
+    padding: 10px 10px;
+}
+
+.CartItem .info .quantity-control button{
+    margin-left: 10px;
+    padding: 5px 20px;
+    color: white;
+    font-weight: 600;
+    height: 35px;
+    border-radius: 5px;
+    background: #0466c8;
+}
