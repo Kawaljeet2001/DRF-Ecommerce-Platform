@@ -18,7 +18,7 @@ const Login = () => {
 
     // var object = {};
     // object[username] = token;
-    mylocalstorage.setItem(username, token);
+    mylocalstorage.setItem(username, JSON.stringify(token));
 
     mylocalstorage.setItem("currentlyLoggedUser" , username);
     

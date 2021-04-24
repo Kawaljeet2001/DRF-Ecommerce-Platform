@@ -69,6 +69,11 @@ button{
     margin-top: 5px;
 }
 
+.Product-Detail .info .quantity p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
 .Product-Detail .info .taxes{
     margin-top: -12px;
     font-weight: 700;
@@ -103,6 +108,11 @@ button{
     margin-right: 15px;
     cursor: pointer;
     transition: 0.1s ease;
+}
+
+.size-val-selected{
+    border: 1px solid #f94144 !important;
+    color: #f94144;
 }
 .Product-Detail .info .sizes .size-holder .size-val:hover{
     border: 1px solid #f94144;

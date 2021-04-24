@@ -13,7 +13,7 @@ const Register = () => {
     {
         var mylocalstorage = window.localStorage;
         console.log({"access" : data.access , "refresh" : data.refresh});
-        mylocalstorage.setItem(data.username , {"access" : data.access , "refresh" : data.refresh})
+        mylocalstorage.setItem(data.username , JSON.stringify({"access" : data.access , "refresh" : data.refresh}))
         UpdateUser(data.username)
         
         mylocalstorage.setItem("currentlyLoggedUser" , data.username);
